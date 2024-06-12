@@ -1,0 +1,11 @@
+FROM node:alphine
+
+WORKDIR /reactjs/
+
+COPY ./package.json /reactjs
+
+RUN npm install
+
+COPY . /reactjs
+
+CMD ["npm","start"]
